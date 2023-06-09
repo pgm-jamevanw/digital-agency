@@ -1,0 +1,500 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    /* font-family: 'Open Sans', sans-serif; */
+    font-family: 'Raleway', sans-serif;
+    height:100%;
+    color: #FFF;
+    background-color: #0F1118;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+img {
+    width: 12.5rem;
+    height: 12.5rem;
+}
+
+form label {
+    line-height: 1.5rem;
+}
+
+form input {    
+    color: #FF0037;
+    width: 100%;
+    margin-top: .625rem;
+    margin-bottom: .625rem;
+    padding: .625rem;
+    border-radius: .625rem;
+}
+
+form p {
+    margin-top: .9375rem;
+}
+
+::-webkit-scrollbar {
+    width: .125rem;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #FF0037; 
+    border-radius: .625rem;
+}
+  
+/* HEXAGON NAV ----------------------------------------------------- */
+
+.hexagon {
+    position: relative;
+    width: 46%;
+    height: 80%;
+    margin: auto;
+    color: white;
+    background-color: #1E2530;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    transition: 0.5s;
+}
+
+.hexagon:hover {
+    transition: .2s;
+    box-shadow: 0 0 3.125rem #FF0037;
+}
+
+.hexagon a {
+    z-index: 1;
+    margin: auto;
+    font-size: 1.875rem;
+    text-decoration: none;
+    color: white;
+}
+  
+.hexagon:before,
+.hexagon:after {
+    position: absolute;
+    content: "";
+    background: inherit;
+    height: 100%;
+    width: 100%;
+    border-radius: 0;
+    transition: 0.5s;
+    transform-origin: center;
+    transform: rotateZ(60deg);
+}
+
+.hexagon:before {
+    transform: rotateZ(60deg);
+}
+
+.hexagon:after {
+    transform: rotateZ(-60deg);
+}
+
+.hexagon a:hover {
+    color: #FF0037;
+}
+
+/* ANIMATION HOME --------------------------------------------------- */
+
+.anim-home {
+    overflow: hidden;
+    transform: translateY(4vw);
+}
+
+.anim-home p {
+    white-space: nowrap;
+    font-size: calc(4.7vw * 3);
+    font-weight: 900;
+    line-height: 100%;
+    color: hsl(217, 23%, 11%);
+    animation: movetextrl 20s linear infinite;
+}
+
+@keyframes movetextrl {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-300%);
+    }
+}
+
+/* CLASSES HOME ------------------------------------------------------ */
+
+.header-home {
+  padding-bottom: 2.5rem;
+	text-align: center;
+	width: 100%;
+	height: auto;
+	position: relative;
+	overflow: hidden;
+}
+
+.overlay-home {
+	width: 100%;
+	height: 100%;
+	padding: 3.125rem;
+    color: #FFF;
+}
+
+.overlay-home h1 {
+	font-size: 5rem;
+	margin-bottom: 1.875rem;
+}   
+
+.overlay-home p {
+	margin-bottom: 1.875rem;
+  color: #FF0037;
+}
+
+.nav-home {
+    display: inline-block;
+    text-align: initial;
+    width: 12.5rem;
+    height: 12.5rem;
+}
+
+.container-home {
+    max-width: 70rem;
+    width: 90%; 
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-home > article {
+    margin-bottom: 3.125rem;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    text-align: justify;
+    line-height: 1.6rem;
+}
+
+.container-home img {
+    width: 25rem;
+    height: 31.25rem;
+    border-radius: 1.25rem;
+    box-shadow: #FF0037 0rem .625rem .625rem -0.4375rem;
+}
+
+.container-home h2 {
+    color:#FF0037;
+    margin-bottom: .9375rem;
+}
+
+.text-right {
+    padding-left: 1.5625rem;
+}
+
+.text-left {
+    padding-right: 1.5625rem;
+}
+
+.btn-home {
+    display: block;
+    margin: 0 auto;
+    width: 20%;
+    margin-top: .625rem;
+    padding: .625rem;
+    background-color: #FF0037;
+    border: .125rem solid #1E2530;
+    border-radius: .625rem;
+    text-align: center;
+    color: #FFF;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.btn-book {
+    display: block;
+    width: 30%;
+    margin-top: 1.875rem;
+    padding: .625rem;
+    background-color: #FF0037;
+    border: .125rem solid #1E2530;
+    border-radius: .625rem;
+    text-align: center;
+    color: #FFF;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* CLASSES ADRES -------------------------------------------------- */
+
+.contactinfo-adres {
+    margin: 0 auto;
+    width: 90%;
+    margin-bottom: 3.125rem;
+    text-align: center;
+}
+
+.contacinfo-adres h2 {
+    margin: .625rem;
+    text-transform: uppercase;
+}
+
+.contactinfo-adres h2:last-child {
+    margin-top: 1.5625rem;
+}
+
+.contactinfo-adres a {
+    color: #FF0037;
+    text-decoration: none;
+}
+
+.contactinfo-adres a:hover {
+    transform: scale(1.01);
+}
+
+.contactinfo-adres ul {
+    text-align: center;
+    list-style: none;
+    line-height: 1.6rem;
+}
+
+.container-adres {
+    max-width: 81rem;
+    width: 90%; 
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-evenly;
+    margin: 0 auto;
+    margin-bottom: 12.5rem;
+}
+
+.container-adres .card {
+    border-radius: 1.25rem;
+    background-color: #1E2530;
+    color: #FFF;
+    width: 30rem;
+    margin-bottom: 3.4375rem;
+    padding: 1.25rem;
+}
+
+.card-inner {
+    width: 100%;
+    height: 100%;
+}
+
+.card-inner .img1 {
+    background-image: url("../images/agency1.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: .625rem;
+    width: 100%;
+    height: 15.625rem;
+}
+
+.card-inner .card-title {
+    margin-top: .9375rem;
+    margin-bottom: .625rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.card-star {
+    margin-bottom: .625rem;
+}
+
+.card-inner .card-text {
+    font-size: 0.9rem;
+    line-height: 1.4rem;
+    text-align: justify;
+}
+
+.btn-adres {
+    display: block;
+    margin-top: .625rem;
+    padding: .625rem;
+    background-color: #FF0037;
+    border: .125rem solid #1E2530;
+    border-radius: .625rem;
+    text-align: center;
+    color: #FFF;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-adres {
+    background-color: #1E2530;
+    width: 100%;
+    height: 6.25rem;
+    margin-bottom: 2.5rem;
+    border-bottom: .125rem solid #FF0037;
+}
+
+.title-adres {
+    position: absolute;
+    left: 0;
+    padding-left: 1.25rem;
+    padding-top: 1.25rem;
+}
+
+.title-adres a {
+    font-size: 3rem;
+    color: white;
+    text-decoration: none;
+}
+
+.menu-adres {
+    position: absolute;
+    right: 0;
+    padding-right: 2.5rem;
+    padding-top: 2.5rem;
+}
+
+.menu-adres li {
+    list-style: none;
+    display: inline;
+}
+
+.menu-adres li a {
+    font-size: 1.3rem;
+    color: white;
+    text-decoration: none;
+    padding: .625rem;
+}
+
+.menu-adres li a:hover,
+.title-adres a:hover {
+    color: #FF0037;
+}
+
+/* CLASSES INFO --------------------------------------------------- */
+
+.container-info {
+    width: 95%;
+    margin: 0 auto;
+    margin-bottom: 1.875rem;
+}
+
+.container-info h2 {
+    margin-top: 12.5rem;
+    text-align: center;
+    padding: .9375rem;
+    font-size: 3rem;
+}
+
+.video {
+    position: absolute;
+    margin-top: 9.6875rem;
+    margin-right: 6.5625rem;
+    right: 0;
+    top: 0;
+    width: 40%;
+    height: 40%;
+}
+
+.text-info {
+    margin-left: 4.0625rem;
+    width: 40%;
+}
+
+.text-info h1 {
+    margin-bottom: .9375rem;
+}
+
+.text-info p {
+    line-height: 1.5rem;
+    text-align: justify;
+}
+
+.imgs-info {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    flex-grow: 1;
+    margin-top: 1.25rem;
+}
+
+.imgs-info img {
+    margin: .9375rem;
+    margin-bottom: 1.875rem;
+    height: 23.4375rem;
+    width: 17.1875rem;
+    border-radius: .625rem;
+    filter: grayscale(100%);
+}
+
+.imgs-info img:hover {
+    filter: none;
+    box-shadow: 0 0 .625rem #FF0037;
+    transform: scale(1.1);
+    transition: all 0.4s ease;
+}
+  
+.img-description {
+    text-align: center;
+    position: relative;
+    color: white;
+    margin-bottom: .625rem;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity .2s, visibility .2s;
+}
+  
+.img-wrap-info:hover .img-description {
+    visibility: visible;
+    opacity: 1;
+    transform: scale(1.1);
+    transition: all 0.4s ease;
+}
+
+/* CLASSES FORM --------------------------------------------------- */
+
+.container-form {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.card-form {
+    width: 50%;
+    margin: 0 auto;
+    background-color: #1E2530;
+    border-radius: .625rem;
+    margin-top: 6.875rem;
+    padding: 1.875rem;
+}
+
+.btn-form {
+    display: block;
+    margin-top: .625rem;
+    padding: .625rem;
+    background-color: #FF0037;
+    border: .125rem solid #1E2530;
+    border-radius: .625rem;
+    text-align: center;
+    color: #FFF;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* FOOTER --------------------------------------------------------- */
+
+.footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    background-color: #1E2530;
+    text-align: center;
+    border-top: .125rem solid #FF0037;
+}
+
+.footer-content {
+    color: #FFF;
+    padding-top: 3.125rem;
+    padding-bottom: 2.5rem;
+}
+
+
